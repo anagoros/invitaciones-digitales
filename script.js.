@@ -1,0 +1,26 @@
+let selectedTemplate = '';
+
+function selectTemplate(templateId) {
+    selectedTemplate = templateId;
+    document.getElementById('personalization').style.display = 'block';
+    console.log('Selected Template:', selectedTemplate);
+}
+
+function previewTemplate() {
+    const name = document.getElementById('name').value;
+    const date = document.getElementById('date').value;
+    
+    let previewHtml = `<h3>Preview of ${selectedTemplate}</h3>`;
+    previewHtml += `<p>Name: ${name}</p>`;
+    if (date) {
+        previewHtml += `<p>Date: ${date}</p>`;
+    }
+
+    document.getElementById('preview').innerHTML = previewHtml;
+    document.getElementById('preview-section').style.display = 'block';
+}
+
+function purchaseTemplate() {
+    // Simulate purchase and file download process
+    alert('Purchase successful! Your customized file is being generated.');
+}
