@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Invitations & Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Digital Invitations & Cards</h1>
+        <p>Select a template, personalize it, and download your custom card or invitation.</p>
+    </header>
+
+    <main>
+        <!-- Template selection section -->
+        <section id="template-selection">
+            <h2>Select a Template</h2>
+            <div class="template-grid">
+                <!-- Template 1 -->
+                <div class="template" id="template1">
+                    <img src="template1.jpg" alt="Wedding Invitation">
+                    <button onclick="selectTemplate('template1')">Select Template</button>
+                </div>
+                <!-- Template 2 -->
+                <div class="template" id="template2">
+                    <img src="template2.jpg" alt="Birthday Invitation">
+                    <button onclick="selectTemplate('template2')">Select Template</button>
+                </div>
+                <!-- Template 3 -->
+                <div class="template" id="template3">
+                    <img src="template3.jpg" alt="Business Card">
+                    <button onclick="selectTemplate('template3')">Select Template</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personalization section -->
+        <section id="personalization" style="display:none;">
+            <h2>Personalize your Template</h2>
+            <form id="personalization-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+
+                <label for="date">Date (for invitations):</label>
+                <input type="date" id="date" name="date">
+
+                <button type="button" onclick="previewTemplate()">Preview</button>
+            </form>
+        </section>
+
+        <!-- Preview and purchase -->
+        <section id="preview-section" style="display:none;">
+            <h2>Preview</h2>
+            <div id="preview"></div>
+            <button onclick="purchaseTemplate()">Proceed to Checkout</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
